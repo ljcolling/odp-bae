@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+/Applications/MATLAB_R2021b.app/bin/matlab -batch "run('$1')"
