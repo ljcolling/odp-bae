@@ -45,19 +45,51 @@ The code for the reanalysis is available at
 Due to the use of proprietary software, it is not possible to
 automatically build this document. To manually build this document, clone
 the git repository and run `make`. This makefile is currently only set up
-to work with MATLAB R2021. To use with a different version of Matlab, edit
-`./data/matlab` as appropriate before running `make`
+to work with MATLAB R2021 on MacOS. To use with a different version of
+Matlab on a difference OS, edit `./data/matlab` as appropriate before
+running `make`.
 
 The code in repository depends on `eeglab2021.1`. This is included in the
 root of this repository.
 
-```{r}
+`R` is required to build the documentation.
+
+# Results
+
+## Behavioural analysis
+
+Although the supplied data files appear to contain the data needed for
+reproducing the behavioural analysis, the data files contain insufficient
+metadata to make this possible. Furthermore, some of the minimal metadata that
+does exist appears to be incorrect. Apart from the insufficient metadata, the
+description of the analysis in the manuscript is to brief to be able to
+re-create it with the supplied data.
+
+
+## Decoding accuracy 
+
+The decoding analysis could largely be performed with the code provided on
+the OSF repository. Only one minor edited so made to one of the files to
+fix an issue with the specified file path.
+
+After the decoding analysis was performed, the plots for Figure 2c (Experiment
+1) and Figure 2d (Experiment 2) could be reasonable reproduced (see below).
+Note, however, that it is not possible to reproduce the figure exactly because
+the decoding analysis is dependent on a random seed that has not been fixed to
+a specific value (either in the original analysis or reproduction).
+ 
+
+```{r, echo=FALSE}
 knitr::include_graphics("Experiment_1.png")
 ```
 
-
-```{r}
+```{r, echo=FALSE}
 knitr::include_graphics("Experiment_2.png")
 ```
+
+Judging from the references in the manuscript, it appears as if the statistical
+analyses were performed with the mass univariate toolbox [@Groope]; however,
+again the analysis description in manuscript was too brief to easily reproduce
+the results.
 
 # References
